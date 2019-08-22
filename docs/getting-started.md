@@ -198,7 +198,8 @@ Click on a tile to change the primary color of the theme:
 <button data-md-color-primary="brown">Brown</button>
 <button data-md-color-primary="grey">Grey</button>
 <button data-md-color-primary="blue-grey">Blue Grey</button>
-<button data-md-color-primary="stanford">Stanford</button>
+<button data-md-color-primary="black">Black</button>
+<button data-md-color-primary="white">White</button>
 
 <script>
   var buttons = document.querySelectorAll("button[data-md-color-primary]");
@@ -360,16 +361,15 @@ translations for all template variables and labels in the following languages:
     </tr>
     <tr>
       <td><code>sk</code> / Slovak</td>
+      <td><code>si</code> / Slovenian</td>
       <td><code>es</code> / Spanish</td>
       <td><code>sv</code> / Swedish</td>
-      <td><code>tr</code> / Turkish</td>
     </tr>
     <tr>
+      <td><code>tr</code> / Turkish</td>
       <td><code>uk</code> / Ukrainian</td>
       <td><code>vi</code> / Vietnamese</td>
-      <td colspan="2">
-        <code>zh</code> / Chinese (Simplified)
-      </td>
+      <td><code>zh</code> / Chinese (Simplified)</td>
     </tr>
     <tr>
       <td colspan="2">
@@ -683,6 +683,39 @@ Material theme including more information regarding installation and usage:
   [29]: extensions/metadata.md
   [30]: extensions/permalinks.md
   [31]: extensions/pymdown.md
+
+## Plugins
+
+MkDocs's plugin architecture makes it possible to add pre- or post-processing
+steps that sit between the theme and your documentation. A great example of a
+third-party plugin is the [mkdocs-minify-plugin][32] which strips all whitespace
+from the generated documentation.
+
+Install it with `pip`:
+
+``` sh
+pip install mkdocs-minify-plugin
+```
+
+Enable it with the following lines in your `mkdocs.yml`:
+
+``` yaml
+plugins:
+  - search
+  - minify:
+      minify_html: true
+```
+
+The MkDocs wiki contains a [list of all available plugins][33].
+
+!!! warning "Remember to re-add the `search` plugin"
+
+    If you have no `plugins` entry in your config file yet, you'll likely also
+    want to add the `search` plugin. MkDocs enables it by default if there is
+    no `plugins` entry set.
+
+  [32]: https://github.com/byrnereese/mkdocs-minify-plugin
+  [33]: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins
 
 ## Full example
 

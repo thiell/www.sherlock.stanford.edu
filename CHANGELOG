@@ -1,3 +1,14 @@
+mkdocs-material-4.4.1 (2019-08-22)
+
+  * Added support for black as a primary color
+  * Fixed broken footer bar when h1 contained HTML tags
+
+mkdocs-material-4.4.0 (2019-06-15)
+
+  * Added Slovenian translations
+  * Reverted template minification in favor of mkdocs-minify-plugin
+  * Fixed #1114: Tabs don't reappear when default font-size is smaller than 16
+
 mkdocs-material-4.3.1 (2019-05-23)
 
   * Fixed spelling error in Danish translations
